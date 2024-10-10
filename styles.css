@@ -23,19 +23,85 @@ body, .quote-input {
     max-width: 90%;
   }
   
+/* Settings icon */
+.settings-icon {
+  position: absolute;
+  top: 10rem;
+  right: 50rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #D8A0C2;
+}
+
+/* Settings panel (hidden by default) */
+.settings-panel {
+  position: absolute;
+  top: 12rem;
+  right: 42rem;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.settings-panel.hidden {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+#winscreenToggleWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;  /* Add space between toggle and button */
+}
+
+#winscreenToggle {
+  margin-left: 8px; /* Space between the label and the checkbox */
+}
+
+#skipQuoteButton {
+  padding: 8px 16px;
+  background-color: #D8A0C2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#skipQuoteButton:hover {
+  background-color: #b878a1;
+}
+
 .timer {
-    position: absolute;
-    top: 10rem;
-    font-size: 5rem;
-    color: #D8A0C2;
-    font-weight: bold;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5rem;
+  color: #D8A0C2;
+  font-weight: bold;
+}
+
+.wpm-display {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #D8A0C2;
+  font-weight: bold;
 }
 
 .quote-display {
   margin-bottom: 1rem;
-  margin-left: calc(1rem + 2px);
-  margin-right: calc(1rem + 2px);
   font-size: 1.5rem;
+  /* Disable text selection */
+  user-select: none;  /* For modern browsers */
+  -webkit-user-select: none;  /* For Safari */
+  -moz-user-select: none;  /* For Firefox */
+  -ms-user-select: none;  /* For IE/Edge */
 }
 
 .quote-input {
@@ -50,6 +116,7 @@ body, .quote-input {
   font-size: 1.5rem;
   border-radius: .5rem;
 }
+
 
 .quote-input:focus {
     border-color: #000000;
