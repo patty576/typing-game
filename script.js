@@ -167,3 +167,30 @@ function getTimerTime() {
 
 // Initial rendering of a quote
 renderNewQuote();
+
+let timer;
+let timeLeft = 20; // Timer set for 60 seconds
+const timerDisplay = document.getElementById('timer');
+
+function startTimer() {
+    timerDisplay.textContent = timeLeft; // Display initial time
+    timer = setInterval(() => {
+        timeLeft--;
+        timerDisplay.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            // You can add logic to end the game here
+            alert("Time's up!");
+        }
+    }, 1000); // Update every second
+}
+
+function resetTimer() {
+    clearInterval(timer);
+    timeLeft = 60; // Reset to initial value
+    timerDisplay.textContent = timeLeft; // Reset display
+}
+
+// Call this function when you want to start the timer, like when the user starts typing
+startTimer(); 

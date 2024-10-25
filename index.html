@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Typing Practice</title>
 </head>
+
 <body>
   <div class="container">
     <div class="timer" id="timer"></div> <!-- Timer above typing box -->
@@ -26,7 +28,7 @@
         <label for="winscreenToggle">Winscreen</label>
         <input type="checkbox" id="winscreenToggle" checked> <!-- Toggle for WPM display -->
       </div>
-      
+
       <!-- Skip Quote Button -->
       <button id="skipQuoteButton">Skip Quote</button>
     </div>
@@ -34,30 +36,5 @@
     <div class="wpm-display" id="wpmDisplay"></div> <!-- WPM display below the typing box -->
   </div>
 </body>
+
 </html>
-<!-- let timer;
-let timeLeft = 60; // Timer set for 60 seconds
-const timerDisplay = document.getElementById('timer');
-
-function startTimer() {
-    timerDisplay.textContent = timeLeft; // Display initial time
-    timer = setInterval(() => {
-        timeLeft--;
-        timerDisplay.textContent = timeLeft;
-
-        if (timeLeft <= 0) {
-            clearInterval(timer);
-            // You can add logic to end the game here
-            alert("Time's up!");
-        }
-    }, 1000); // Update every second
-}
-
-function resetTimer() {
-    clearInterval(timer);
-    timeLeft = 60; // Reset to initial value
-    timerDisplay.textContent = timeLeft; // Reset display
-}
-
-// Call this function when you want to start the timer, like when the user starts typing
-startTimer();  -->
